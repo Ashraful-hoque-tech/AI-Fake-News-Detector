@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+.navbar {
+  height: 70px;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #222;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #222;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #666;
+  font-size: 18px;
+}
+
+.analyzer {
+  width: 80%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.news-form textarea {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  resize: vertical;
+  font-size: 16px;
+}
+
+.news-form button {
+  margin-top: 15px;
+}
+
+.result-card {
+  margin-top: 30px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.result-card div {
+  margin-top: 20px;
+}
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.auth-card {
+  width: 400px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.auth-card input {
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+}
+
+.error {
+  color: #d00;
+  margin-top: 10px;
+}
+
+.history-page {
+  width: 80%;
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.history-card {
+  background: white;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.history-result {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+}
