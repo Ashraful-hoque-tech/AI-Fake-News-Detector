@@ -6,18 +6,14 @@ const AuthContext = createContext();
 const getStoredUser = () => {
   try {
     const storedUser = localStorage.getItem("user");
-
     if (!storedUser) {
       return null;
     }
-
     return JSON.parse(storedUser);
   } catch (error) {
     console.error("Invalid user data in localStorage");
-
     localStorage.removeItem("user");
     localStorage.removeItem("token");
-
     return null;
   }
 };
@@ -30,14 +26,10 @@ export const AuthProvider = ({ children }) => {
       email,
       password,
     });
-
     const { token, user } = response.data;
-
     localStorage.setItem("token", token);
     localStorage.setItem("user", JSON.stringify(user));
-
     setUser(user);
-
     return response.data;
   };
 
@@ -47,14 +39,12 @@ export const AuthProvider = ({ children }) => {
       email,
       password,
     });
-
     return response.data;
   };
 
   const logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-
     setUser(null);
   };
 
