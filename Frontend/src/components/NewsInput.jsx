@@ -12,7 +12,7 @@ function NewsInput({ onAnalyze, loading }) {
 
     onAnalyze(newsText);
 
-    setNewsText("");
+    // setNewsText("");
   };
 
   return (

@@ -48,13 +48,17 @@ const analyzeNewsWithAI = async (newsText) => {
     return result;
 
   } catch (error) {
-
+    console.error(error);
+    
     console.error(
       "Gemini API error:",
+  
       error.response?.data || error.message
     );
 
     throw new Error(
+      console.error(Error),
+      
       "Failed to analyze news using AI."
     );
   }
