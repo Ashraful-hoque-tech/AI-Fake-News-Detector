@@ -17,27 +17,20 @@ connectDB();
 
 
 // Middleware
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-    credentials: true
-  })
-);
+// Middleware
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://ai-fake-news-detector-blue.vercel.app"
+  ],
+  credentials: true
+}));
 
 app.use(express.json());
 
-
 // Routes
-app.use(
-  "/api/auth",
-  authRoutes
-);
-
-app.use(
-  "/api/news",
-  newsRoutes
-);
-
+app.use("/api/auth", authRoutes);
+app.use("/api/news", newsRoutes);
 
 // Health check
 app.get("/", (req, res) => {
