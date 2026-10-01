@@ -2,7 +2,6 @@ const Analysis = require("../models/Analysis");
 
 const analyzeNewsWithAI = require("../services/llmService");
 
-
 // ANALYZE NEWS
 const analyzeNews = async (req, res) => {
   try {
